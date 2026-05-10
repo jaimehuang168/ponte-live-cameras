@@ -28,6 +28,7 @@ function selectCamera(key) {
   routeName.textContent = camera.name;
   routeHelp.textContent = camera.help;
   openCamera.href = camera.url;
+  openCamera.setAttribute("aria-label", `Abrir câmera ${camera.code} em nova aba`);
 
   switchButtons.forEach((button) => {
     const isActive = button.dataset.camera === key;
