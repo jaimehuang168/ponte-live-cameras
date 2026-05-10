@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  color: #f7fbff;
+  background: #061017;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding:
+    env(safe-area-inset-top)
+    env(safe-area-inset-right)
+    env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+}
+
+header,
+footer {
+  padding: 10px 12px;
+  background: #0b1f2a;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  color: #9fb1bc;
+  font-size: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+p {
+  margin: 4px 0 0;
+  color: #9fb1bc;
+  font-size: 12px;
+}
+
+.cams {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  min-height: 0;
+  padding: 10px;
+}
+
+.cam {
+  display: grid;
+  min-height: 0;
+  align-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  color: #f7fbff;
+  text-align: center;
+  text-decoration: none;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(247, 211, 106, 0.18), transparent 36%),
+    linear-gradient(145deg, #102d3b, #02070b);
+}
+
+.cam b {
+  color: #f7d36a;
+  font-size: clamp(22px, 8vw, 36px);
+}
+
+.cam span {
+  color: #f7fbff;
+  font-size: clamp(16px, 5vw, 24px);
+  font-weight: 800;
+}
+
+.cam small {
+  color: #9fb1bc;
+  font-size: 14px;
+}
+
+.cam em {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  padding: 0 22px;
+  border-radius: 999px;
+  color: #061017;
+  background: #f7d36a;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #ff3b30;
+  box-shadow: 0 0 0 7px rgba(255, 59, 48, 0.16);
+}
