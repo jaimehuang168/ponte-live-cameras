@@ -12,32 +12,36 @@
 </head>
 <body>
   <main class="app">
-    <header>
-      <h1>Ponte da Amizade ao vivo</h1>
-      <p>Toque em uma opção abaixo para abrir a câmera ao vivo.</p>
+    <header class="topbar">
+      <span class="live-pill"><i aria-hidden="true"></i> Ao vivo</span>
+      <h1>Ponte da Amizade</h1>
+      <p>Escolha o sentido e abra o player direto.</p>
     </header>
 
-    <section class="cams" aria-label="Câmeras ao vivo">
-      <a class="cam" href="https://playerv.logicahost.com.br/video-ip-camera/portovelhomamore//true/true/V2tjeGMyRXhjRmhQU0dSUFVYcFdlbGxxU210alJtdDVVbTA1YVUwd05IZFVSekZQWkcxS1ZFNVhiR3BhZWpBNStS/16:9/V1ZWb1UwMUhUa2xVVkZwTlpWUm5PUT09K1I=/fozpontedaamizadesentidobrasil.stream/?autoplay=1&muted=1">
-        <i class="dot" aria-hidden="true"></i>
-        <b>CDE -> Foz</b>
-        <span>Tocar para ver ao vivo</span>
-        <small>Sentido Brasil</small>
-        <em>Abrir player</em>
+    <section class="control-card" aria-label="Selecionar câmera">
+      <div class="switcher" role="tablist" aria-label="Sentido da câmera">
+        <button class="switch-button is-active" type="button" role="tab" aria-selected="true" data-camera="brasil">
+          CDE → Foz
+        </button>
+        <button class="switch-button" type="button" role="tab" aria-selected="false" data-camera="paraguai">
+          Foz → CDE
+        </button>
+      </div>
+
+      <div class="direction-panel">
+        <span class="route-code" id="routeCode">CDE → Foz</span>
+        <strong id="routeName">Sentido Brasil</strong>
+        <p id="routeHelp">Ciudad del Este para Foz do Iguaçu.</p>
+      </div>
+
+      <a class="open-button" id="openCamera" href="https://playerv.logicahost.com.br/video-ip-camera/portovelhomamore//true/true/V2tjeGMyRXhjRmhQU0dSUFVYcFdlbGxxU210alJtdDVVbTA1YVUwd05IZFVSekZQWkcxS1ZFNVhiR3BhZWpBNStS/16:9/V1ZWb1UwMUhUa2xVVkZwTlpWUm5PUT09K1I=/fozpontedaamizadesentidobrasil.stream/?autoplay=1&muted=1">
+        Abrir câmera
       </a>
 
-      <a class="cam" href="https://playerv.logicahost.com.br/video-ip-camera/portovelhomamore//true/true/V2tjeGMyRXhjRmhQU0dSUFVYcFdlbGxxU210alJtdDVVbTA1YVUwd05IZFVSekZQWkcxS1ZFNVhiR3BhZWpBNStS/16:9/V1ZWb1UwMUhUa2xVVkZwTlpWUm5PUT09K1I=/fozpontedaamizadesentidoparaguai.stream/?autoplay=1&muted=1">
-        <i class="dot" aria-hidden="true"></i>
-        <b>Foz -> CDE</b>
-        <span>Tocar para ver ao vivo</span>
-        <small>Sentido Paraguai</small>
-        <em>Abrir player</em>
-      </a>
+      <p class="provider-note">O provedor bloqueia duas transmissões embutidas na mesma página; este app abre o player direto.</p>
     </section>
-
-    <footer>
-      O provedor bloqueia duas transmissões embutidas na mesma página. Estes botões abrem o player direto.
-    </footer>
   </main>
+
+  <script src="app.js" defer></script>
 </body>
 </html>
