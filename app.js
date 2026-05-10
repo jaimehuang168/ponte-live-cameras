@@ -40,3 +40,12 @@ function selectCamera(key) {
 switchButtons.forEach((button) => {
   button.addEventListener("click", () => selectCamera(button.dataset.camera));
 });
+
+openCamera.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const opened = window.open(openCamera.href, "_blank", "noopener,noreferrer");
+  if (!opened) {
+    window.location.href = openCamera.href;
+  }
+});
