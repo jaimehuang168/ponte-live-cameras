@@ -56,6 +56,13 @@ button {
   padding: 6px 2px 14px;
 }
 
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .live-pill {
   display: inline-flex;
   width: fit-content;
@@ -79,6 +86,38 @@ button {
   box-shadow: 0 0 0 6px rgba(255, 59, 48, 0.16);
 }
 
+.close-button {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+.close-button span {
+  display: block;
+  margin-top: -2px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.close-button:hover,
+.close-button:focus-visible {
+  color: #061017;
+  background: var(--gold);
+  outline: none;
+}
+
+.close-button:active {
+  transform: translateY(1px);
+}
+
 h1 {
   margin: 0;
   font-size: clamp(2rem, 9vw, 4rem);
@@ -89,6 +128,12 @@ h1 {
 p {
   margin: 0;
   color: var(--muted);
+}
+
+.close-hint {
+  color: #ffd5d2;
+  font-size: 0.82rem;
+  line-height: 1.35;
 }
 
 .control-card {

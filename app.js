@@ -19,6 +19,8 @@ const routeCode = document.querySelector("#routeCode");
 const routeName = document.querySelector("#routeName");
 const routeHelp = document.querySelector("#routeHelp");
 const openCamera = document.querySelector("#openCamera");
+const closeWindow = document.querySelector("#closeWindow");
+const closeHint = document.querySelector("#closeHint");
 const switchButtons = Array.from(document.querySelectorAll(".switch-button"));
 
 function selectCamera(key) {
@@ -41,11 +43,20 @@ switchButtons.forEach((button) => {
   button.addEventListener("click", () => selectCamera(button.dataset.camera));
 });
 
-openCamera.addEventListener("click", (event) => {
-  event.preventDefault();
+closeWindow.addEventListener("click", () => {
+  closeHint.hidden = false;
+  window.close();
 
-  const opened = window.open(openCamera.href, "_blank", "noopener,noreferrer");
-  if (!opened) {
-    window.location.href = openCamera.href;
-  }
+  setTimeout(() => {
+    if (window.closed) {
+      return;
+    }
+
+    if (window.history.length > 1) {
+      window.history.back();
+      return;
+    }
+
+    window.location.replace("about:blank");
+  }, 220);
 });

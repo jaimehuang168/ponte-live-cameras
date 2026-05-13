@@ -21,9 +21,17 @@
 <body>
   <main class="app">
     <header class="topbar">
-      <span class="live-pill"><i aria-hidden="true"></i> Ao vivo</span>
+      <div class="topbar-actions">
+        <span class="live-pill"><i aria-hidden="true"></i> Ao vivo</span>
+        <button class="close-button" id="closeWindow" type="button" aria-label="Fechar janela" title="Fechar janela">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
       <h1>Ponte da Amizade</h1>
       <p>Escolha o sentido. O player abre separado, e esta tela fica aqui para trocar de câmera.</p>
+      <p class="close-hint" id="closeHint" role="status" aria-live="polite" hidden>
+        O navegador bloqueou o fechamento automático. Saindo desta tela...
+      </p>
     </header>
 
     <section class="control-card" aria-label="Selecionar câmera">
