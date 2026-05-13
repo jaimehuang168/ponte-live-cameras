@@ -22,20 +22,27 @@
   <main class="app">
     <header class="topbar">
       <div class="topbar-actions">
-        <span class="live-pill"><i aria-hidden="true"></i> Ao vivo</span>
-        <button class="close-button" id="closeWindow" type="button" aria-label="Fechar janela" title="Fechar janela">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <span class="live-pill"><i aria-hidden="true"></i> <span data-i18n="live">Ao vivo</span></span>
+        <div class="header-controls">
+          <div class="language-switcher" role="group" aria-label="Idioma">
+            <button class="language-button is-active" type="button" data-lang="pt" aria-pressed="true">PT</button>
+            <button class="language-button" type="button" data-lang="es" aria-pressed="false">ES</button>
+            <button class="language-button" type="button" data-lang="zh-Hant" aria-pressed="false">繁中</button>
+          </div>
+          <button class="close-button" id="closeWindow" type="button" aria-label="Fechar janela" title="Fechar janela">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
       </div>
-      <h1>Ponte da Amizade</h1>
-      <p>Escolha o sentido. O player abre separado, e esta tela fica aqui para trocar de câmera.</p>
+      <h1 data-i18n="title">Ponte da Amizade</h1>
+      <p data-i18n="intro">Escolha o sentido. O player abre separado, e esta tela fica aqui para trocar de câmera.</p>
       <p class="close-hint" id="closeHint" role="status" aria-live="polite" hidden>
-        O navegador bloqueou o fechamento automático. Saindo desta tela...
+        <span data-i18n="closeHint">O navegador bloqueou o fechamento automático. Saindo desta tela...</span>
       </p>
     </header>
 
-    <section class="control-card" aria-label="Selecionar câmera">
-      <div class="switcher" role="tablist" aria-label="Sentido da câmera">
+    <section class="control-card" aria-label="Selecionar câmera" data-i18n-aria="cameraSection">
+      <div class="switcher" role="tablist" aria-label="Sentido da câmera" data-i18n-aria="cameraDirection">
         <button class="switch-button is-active" type="button" role="tab" aria-selected="true" data-camera="brasil">
           CDE → Foz
         </button>
@@ -50,11 +57,11 @@
         <p id="routeHelp">Ciudad del Este para Foz do Iguaçu.</p>
       </div>
 
-      <a class="open-button" id="openCamera" href="https://playerv.logicahost.com.br/video-ip-camera/portovelhomamore//true/true/V2tjeGMyRXhjRmhQU0dSUFVYcFdlbGxxU210alJtdDVVbTA1YVUwd05IZFVSekZQWkcxS1ZFNVhiR3BhZWpBNStS/16:9/V1ZWb1UwMUhUa2xVVkZwTlpWUm5PUT09K1I=/fozpontedaamizadesentidobrasil.stream/?autoplay=1&muted=1" target="_blank" rel="noopener noreferrer">
+      <a class="open-button" id="openCamera" href="https://playerv.logicahost.com.br/video-ip-camera/portovelhomamore//true/true/V2tjeGMyRXhjRmhQU0dSUFVYcFdlbGxxU210alJtdDVVbTA1YVUwd05IZFVSekZQWkcxS1ZFNVhiR3BhZWpBNStS/16:9/V1ZWb1UwMUhUa2xVVkZwTlpWUm5PUT09K1I=/fozpontedaamizadesentidobrasil.stream/?autoplay=1&muted=1" target="_blank" rel="noopener noreferrer" data-i18n="openCamera">
         Abrir câmera em nova aba
       </a>
 
-      <p class="provider-note">Para trocar de sentido, volte para esta tela e use o switch acima. O player externo não permite botões personalizados dentro dele.</p>
+      <p class="provider-note" data-i18n="providerNote">Para trocar de sentido, volte para esta tela e use o switch acima. O player externo não permite botões personalizados dentro dele.</p>
     </section>
   </main>
 
